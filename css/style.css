@@ -1,0 +1,151 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color:#FFF;
+}
+
+#board {
+    text-align: center;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.4s all;
+    position: relative;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card .side {
+    background-color: rgb(46, 54, 76);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    transition: 1.0s all;
+    backface-visibility: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+}
+.card .side.back{
+    transform: rotateY(0deg);
+}
+
+.card .side.front{
+    transform: rotateY(180deg);
+}
+
+.card .side.back img{
+    margin-top:40px;
+}
+.card .side.front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card.clicked .back{
+    transform: rotateY(180deg);
+}
+.card.clicked .front{
+    transform: rotateY(0deg);
+}
+
+
+.card.done .back{
+    transform: rotateY(180deg);
+}
+.card.done .front{
+    transform: rotateY(0deg);
+}
+
+
+#info {
+    flex-basis: 30%;
+}
+
+#students-list h2 {
+    color: #3DC4FD;
+    border-bottom: 1px solid rgba(46, 54, 76, 0.1);
+}
+
+.pair-container {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.student-container {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 1%;
+}
+
+.student-img {
+    width: 30px;
+    border-radius: 360px;
+    margin-right: 5px;
+    display: none;
+}
+
+.student-name {
+    text-align: left;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 800;
+}
+
+.pair-container:nth-child(even) {
+    background: rgb(46, 54, 76);
+    color: #fff;
+}
+
+
+
+button {
+    background-color: #3DC4FD;
+    color: #fff;
+    padding: 2% 5%;
+    font-size: 2.5rem;
+    border-radius: 360px;
+    border: 0;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.try-it {
+    background-color: #fff;
+    color: #3DC4FD;
+    padding: 1% 3%;
+    margin-top: 2%;
+    font-size: 1rem;
+    border-radius: 360px;
+    border: 0;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+
+#pairs{
+    width: 100%;
+    text-align: center;
+}
+
+#pairs span{
+    color: red;
+    text-align: center;
+}
