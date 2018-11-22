@@ -1,62 +1,67 @@
 class Raffle {
-    constructor(){
-        this.students = _.shuffle([
-            // { name: 'Giorgio', img: 'https://ca.slack-edge.com/T02CQ4EN4-U7XLHB3K8-7a3f2cd06e9a-72 ' },
-            // { name: 'Gabi', img: 'https://ca.slack-edge.com/T02CQ4EN4-U9BLX83D2-204942fa65ea-72' },
-            // { name: 'Juan', img: 'https://ca.slack-edge.com/T02CQ4EN4-U991LCDU4-3fed4d10a310-72' },
-            // { name: 'Susi', img: 'https://ca.slack-edge.com/T02CQ4EN4-U6WSYDE4Q-617818103ce0-72' },
-            // { name: 'Belt', img: 'https://ca.slack-edge.com/T02CQ4EN4-U80LW0H1D-b3e93b28c85d-72' },
-            // { name: 'Marc', img: 'https://ca.slack-edge.com/T02CQ4EN4-U3WM1P708-5739b8c78531-72' },
-            { name: 'Canario🐥 (Adrian)', img: './img/adrian.jpg' },
-            { name: 'Goldhunter (Alfonso)', img: './img/alfonso.jpg' },
-            { name: 'La rizos (Almudena)', img: './img/almudena.jpg' },
-            { name: 'grada #1 /// 円形劇場のリーダー (Celia)', img: './img/celia.jpg' },
-            { name: 'grada #2 (Cesar)', img: './img/cesar.jpg' },
-            { name: 'Con h (Christian)', img: './img/christian.jpg' },
-            { name: 'Sin h (Cristian)', img: './img/cristian.jpg' },
-            { name: 'Transformado de fourier 🤯 (David)', img: './img/david.jpg' },
-            { name: 'La más larga(la coleta) 🍆 (Dennis)', img: './img/denis.jpg' },
-            { name: 'De Pol en Pol (Elvira)', img: './img/elvira.jpg' },
-            { name: 'Esperanzita Rita (Esperanza)', img: './img/esperanza.jpg' },
-            { name: 'Paco Bond 🔫🚁 (Francis)', img: './img/francis.jpg' },
-            { name: 'The Teacher 👨‍🏫 (Gonzalo)', img: './img/gonzalo.jpg' },
-            { name: 'grada #5 (Jacob)', img: './img/jacob.jpg' },
-            { name: '17:00:00 ⏱ (Jhon)', img: './img/jhon.jpg' },
-            { name: 'grada #3 (Laura C.)', img: './img/laura-c.jpg' },
-            { name: 'BOID 🧟‍♀️ (Laura M.)', img: './img/laura-m.jpg' },
-            { name: 'grada #4 (Maria)', img: './img/maria.jpg' },
-            { name: 'Heisenberg 👨🏻‍⚕️ (Mario)', img: './img/mario.jpg' },
-            { name: 'El Catalan 🇵🇱 (Matt)', img: './img/matt.jpg' },
-            { name: 'Jetpack✈️ (Miguel)', img: './img/miguel.jpg' },
-            { name: 'Ludopata ♠️ 🚬 (Pablo)', img: './img/pablo.jpg' },
-            { name: 'El malabarista 🤹🏻‍♂️ (Raul G.)', img: './img/raul-g.jpg' },
-            { name: 'Heisenberg2 👨🏻‍⚕️ (Raul M.)', img: './img/raul-m.jpg' },
-            { name: 'Blockchain (Ricardo)', img: './img/ricardo.jpg' },
-            { name: 'Er Ruben 🚬 (Ruben)', img: './img/ruben.jpg' },
-            { name: 'La peque 👶 (Sara)', img: './img/sara.jpg' },
-            { name: 'Influencer (Teodoro)', img: './img/teodoro.jpg' },
-            { name: 'Czerwony Kapturek 🇪🇨 (Weronika)', img: './img/weronika.jpg' },
-            { name: 'Juan Crush 👪 (Yamilet)', img: './img/yamilet.jpg' },
-        ]);
-        this.students.forEach(e => {
-            this.addCard(e);
-        });
+  constructor() {
+    this.students = _.shuffle([
+      // { name: 'Giorgio', img: 'https://ca.slack-edge.com/T02CQ4EN4-U7XLHB3K8-7a3f2cd06e9a-72 ' },
+      // { name: 'Gabi', img: 'https://ca.slack-edge.com/T02CQ4EN4-U9BLX83D2-204942fa65ea-72' },
+      // { name: 'Juan', img: 'https://ca.slack-edge.com/T02CQ4EN4-U991LCDU4-3fed4d10a310-72' },
+      // { name: 'Susi', img: 'https://ca.slack-edge.com/T02CQ4EN4-U6WSYDE4Q-617818103ce0-72' },
+      // { name: 'Belt', img: 'https://ca.slack-edge.com/T02CQ4EN4-U80LW0H1D-b3e93b28c85d-72' },
+      // { name: 'Marc', img: 'https://ca.slack-edge.com/T02CQ4EN4-U3WM1P708-5739b8c78531-72' },
+      { name: '(Adri) The Kid 👦', img: './img/adrian.JPG' },
+      { name: 'The Refactorizer 👨🏻‍💻 (Alberto)', img: './img/alberto.JPG' },
+      { name: 'El gaaaaaaaaancho ⚓️ (Ángel)', img: './img/angel.JPG' },
+      { name: '(Anna) Hotline Miami 🌴', img: './img/anna.JPG' },
+      { name: 'Bianca, Patri y viceversa 👭 (Bianca)', img: './img/bianca.JPG' },
+      { name: 'Gandia Brothers #2 (Carmen)', img: './img/carmen.JPG' },
+      { name: 'El Hasha der Backend ⚔️ (Christian)', img: './img/christian.JPG' },
+      { name: '(Daniel) Invaders 👾', img: './img/daniel.JPG' },
+      { name: 'Duality 👐 (David D.)', img: './img/daviddiez.JPG' },
+      { name: 'Zombie Warrior 🧟‍♂️ (David M.)', img: './img/davidmunoz.JPG' },
+      { name: 'Gandia Brothers #1 (Edu G.)', img: './img/edugandia.JPG' },
+      { name: 'Mars Attack 🚀 (Fernando)', img: './img/fernando.JPG' },
+      { name: 'Ricky Rubio 🏀 (Jaime)', img: './img/jaime.JPG' },
+      { name: 'Hadouken ☄️ (Yared)', img: './img/jared.JPG' },
+      { name: 'Javier Pong 🏓', img: './img/javiersamper.JPG' },
+      { name: 'Little Cristian 👶 (Javi L.)', img: './img/javilopez.JPG' },
+      { name: 'The philosopher 🤔 (Jorge)', img: './img/jorge.JPG' },
+      { name: 'The (im)posible Game 🌊 (Juan)', img: './img/juan.JPG' },
+      { name: 'Luis Presley 🕺', img: './img/luis.JPG' },
+      { name: 'Miami 🌴', img: './img/miami.JPG' },
+      { name: '(Miguel) Rotation 🧩', img: './img/miguel.JPG' },
+      { name: 'SuperWoman 🦸‍♀️ (Norma)', img: './img/norma.JPG' },
+      { name: 'Bianca, Patri y viceversa 👭 (Patri)', img: './img/patricia.JPG' },
+      { name: 'Tank Man 🚜 (Ricardo)', img: './img/ricardo.JPG' },
+      { name: 'Rodrigo El Torero 💃', img: './img/rodrigo.JPG' },
+      { name: '(Sandra) Virtual Machine 🐧', img: './img/sandra.JPG' },
+      { name: 'Sergio Runner 🏃‍♂️', img: './img/sergio.JPG' },
+      { name: 'Gemma 👩 (Simon)', img: './img/simon.JPG' },
+      { name: '(Sito) Bárcenas 💸', img: './img/sito.JPG' },
+      { name: 'Totoro 🐻 (Sofía)', img: './img/sofia.JPG' },
+      { name: 'SpermKiller 🍆💦 (Sonia B.)', img: './img/soniabravo.JPG' },
+      { name: 'La creadora de Three.js (Sonia R.)', img: './img/soniaruiz.JPG' },
+      { name: 'Colision Master 💥 (Steven)', img: './img/steven.JPG' },
 
-        this.finalPairs = [];
 
-        $(".card").on('click', e => {
-            let total =  $(".card.clicked").length;
-            if(!$(e.currentTarget).hasClass('clicked')){
-                $(e.currentTarget).addClass('clicked');
-                let name = $(e.currentTarget).attr('attr-name');
-                console.log(`Added to pairs ${name}`);
-                this.addPaired(name);
-            }
-        });
-    }
+    ]);
+    this.students.forEach((e) => {
+      this.addCard(e);
+    });
 
-    addCard(card){
-        let card_el = $(`
+    this.finalPairs = [];
+
+    $('.card').on('click', (e) => {
+      const total = $('.card.clicked').length;
+      if (!$(e.currentTarget).hasClass('clicked')) {
+        $(e.currentTarget).addClass('clicked');
+        const name = $(e.currentTarget).attr('attr-name');
+        console.log(`Added to pairs ${name}`);
+        this.addPaired(name);
+      }
+    });
+  }
+
+  addCard(card) {
+    const card_el = $(`
         <div class="card" attr-name="${card.name}">
             <div class="side back">
                 <img src="https://www.ironhack.com/assets/shared/logo.svg">
@@ -66,26 +71,26 @@ class Raffle {
             </div>
         </div>
         `);
-        $("#board").append(card_el)
-    }
+    $('#board').append(card_el);
+  }
 
-    addPaired(name){
-        this.finalPairs.push(name);
-        let chunks = _.chunk(this.finalPairs, 2);
-        let pairs = $("#pairs");
-        pairs.empty();
-        console.log("Rewriting pairs");
-        console.log(chunks);
-        chunks.forEach(ch => {
-            console.log("add pair")
-            let pair = $(`
+  addPaired(name) {
+    this.finalPairs.push(name);
+    const chunks = _.chunk(this.finalPairs, 2);
+    const pairs = $('#pairs');
+    pairs.empty();
+    console.log('Rewriting pairs');
+    console.log(chunks);
+    chunks.forEach((ch) => {
+      console.log('add pair');
+      const pair = $(`
                 <div class="pair">
                   <span>${ch[0]}</span>
                    - 
                   <span>${ch[1] ? ch[1] : '....'}</span>
                 </div>
             `);
-            pairs.append(pair);
-        })
-    }
+      pairs.append(pair);
+    });
+  }
 }
